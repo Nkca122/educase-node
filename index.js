@@ -3,6 +3,7 @@ const app = express();
 const schoolRoutes = require("./routes/schools");
 
 require("dotenv").config();
+app.use(require("cors")());
 app.use(express.json());
 
 app.use("/", schoolRoutes);
